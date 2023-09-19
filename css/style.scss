@@ -1,0 +1,270 @@
+// Variables
+$Lineargradientactiveinputborder: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+$Redinputerrors: hsl(0, 100%, 66%);
+$White: hsl(0, 0%, 100%);
+$Lightgrayishviolet: hsl(270, 3%, 87%);
+$Darkgrayishviolet: hsl(279, 6%, 55%);
+$Verydarkviolet: hsl(278, 68%, 11%);
+$size: 18px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: calc(100% / 3) 100vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .cards {
+            flex: 1;
+            .front-card, .back-card {
+                img {
+                    width: 350px;
+                }
+            }
+            .front-card {
+                position: relative;
+                img {
+                    margin-bottom: 20px;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+                }
+                .content {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    > img {
+                        width: 60px;
+                    }
+                    .number {
+                        margin-top: 30px;
+                        width: 100%;
+                        font-size: 25px;
+                        letter-spacing: 1.5px;
+                        color: $White;
+                    }
+                    .last {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 13px;
+                        p.name, p.date {
+                            color: $Lightgrayishviolet;
+                            text-transform: uppercase;
+                            letter-spacing: 1.5px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .back-card {
+                position: relative;
+                img {
+                    margin-left: 60px;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+                }
+                .content {
+                    position: absolute;
+                    top: 0;
+                    left: 336px;
+                    top: 84px;
+                    font-size: 15px;
+                    color: $White;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+        .form {
+            flex: 1;
+            form {
+                width: 80%;
+                margin: auto;
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 25px;
+                    h3 {
+                        color: $Verydarkviolet;
+                        font-weight: 500;
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                        letter-spacing: 1.5px;
+                    }
+                    input {
+                        padding: 10px 10px 10px 15px;
+                        border-radius: 5px;
+                        border: 1px solid $Lightgrayishviolet;
+                        outline: none;
+                        width: 100%;
+                        &::placeholder {
+                            color: $Lightgrayishviolet;
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                        &:focus {
+                            border-color: hsl(249, 99%, 64%);
+                        }
+                    }
+                    .error {
+                        color: $Redinputerrors;
+                        font-weight: 500;
+                        font-size: 14px;
+                        margin-top: 5px;
+                        font-style: italic;
+                        display: none;
+                    }
+                }
+                div.date {
+                    display: flex;
+                    flex-direction: row !important;
+                    justify-content: space-between;
+                    .exp-date {
+                        flex: 1;
+                        .two {
+                            display: flex;
+                            input {
+                                width: 45%;
+                                margin-right: 2.5%;
+                            }
+                        }
+                    }
+                    .cvc {
+                        flex: 1;
+                    }
+                }
+                input[type="submit"] {
+                    width: 100%;
+                    padding: 15px;
+                    background-color: $Verydarkviolet;
+                    color: $White;
+                    letter-spacing: 2px;
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        background-color: hsla(278, 68%, 11%, 0.6);
+                    }
+                }
+            }
+        }
+        .completed {
+            display: none;
+            text-align: center;
+            flex: 1;
+            h1 {
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-weight: 500;
+                margin: 15px 0;
+            }
+            p {
+                color: $Darkgrayishviolet;
+            }
+            button {
+                margin: 10px 0;
+                width: 60%;
+                padding: 14px;
+                border: none;
+                outline: none;
+                background-color: $Verydarkviolet;
+                color: $White;
+                border-radius: 5px;
+                letter-spacing: 2px;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background-color: hsla(278, 68%, 11%, 0.6);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    body {
+        background-image: url(../images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 100% calc(100vh / 3);
+        .container {
+            width: 92% !important;
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 700px) {
+    body {
+        background-image: url(../images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 100% calc(100vh / 3);
+        .container {
+            width: 95% !important;
+            flex-direction: column;
+            .cards {
+                display: flex;
+                flex-direction: column-reverse;
+                .front-card, .back-card {
+                    > img {
+                        width: 280px !important;
+                        box-shadow: none !important;
+                    }
+                }
+                .front-card {
+                    z-index: 99;
+                    > img {
+                        margin-top: -73px;
+                    }
+                    .content {
+                        position: absolute !important;
+                        top: -55px !important;
+                        left: 20px;
+                        p {
+                            margin: 13px 0 0 0 !important;
+                            font-size: 19px !important;
+                        }
+                        .last {
+                            margin-top: 0 !important;
+                            p {
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+                }
+                .back-card {
+                    position: relative !important;
+                    .content {
+                        .cvc {
+                            position: absolute !important;
+                            right: 25px;
+                            top: -18px;
+                        }
+                    }
+                }
+            }
+            .form {
+                form {
+                    width: 95% !important;
+                }
+            }
+            .completed {
+                button {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

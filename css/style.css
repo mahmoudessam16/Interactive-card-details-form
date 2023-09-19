@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 33.3333333333% 100vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .cards {
+  flex: 1;
+}
+body .container .cards .front-card img, body .container .cards .back-card img {
+  width: 350px;
+}
+body .container .cards .front-card {
+  position: relative;
+}
+body .container .cards .front-card img {
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+body .container .cards .front-card .content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+body .container .cards .front-card .content > img {
+  width: 60px;
+}
+body .container .cards .front-card .content .number {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  color: hsl(0, 0%, 100%);
+}
+body .container .cards .front-card .content .last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13px;
+}
+body .container .cards .front-card .content .last p.name, body .container .cards .front-card .content .last p.date {
+  color: hsl(270, 3%, 87%);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+body .container .cards .back-card {
+  position: relative;
+}
+body .container .cards .back-card img {
+  margin-left: 60px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+body .container .cards .back-card .content {
+  position: absolute;
+  top: 0;
+  left: 336px;
+  top: 84px;
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1.5px;
+}
+body .container .form {
+  flex: 1;
+}
+body .container .form form {
+  width: 80%;
+  margin: auto;
+}
+body .container .form form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+body .container .form form > div h3 {
+  color: hsl(278, 68%, 11%);
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1.5px;
+}
+body .container .form form > div input {
+  padding: 10px 10px 10px 15px;
+  border-radius: 5px;
+  border: 1px solid hsl(270, 3%, 87%);
+  outline: none;
+  width: 100%;
+}
+body .container .form form > div input::-moz-placeholder {
+  color: hsl(270, 3%, 87%);
+  font-weight: bold;
+  font-size: 16px;
+}
+body .container .form form > div input::placeholder {
+  color: hsl(270, 3%, 87%);
+  font-weight: bold;
+  font-size: 16px;
+}
+body .container .form form > div input:focus {
+  border-color: hsl(249, 99%, 64%);
+}
+body .container .form form > div .error {
+  color: hsl(0, 100%, 66%);
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 5px;
+  font-style: italic;
+  display: none;
+}
+body .container .form form div.date {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+body .container .form form div.date .exp-date {
+  flex: 1;
+}
+body .container .form form div.date .exp-date .two {
+  display: flex;
+}
+body .container .form form div.date .exp-date .two input {
+  width: 45%;
+  margin-right: 2.5%;
+}
+body .container .form form div.date .cvc {
+  flex: 1;
+}
+body .container .form form input[type=submit] {
+  width: 100%;
+  padding: 15px;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .container .form form input[type=submit]:hover {
+  background-color: hsla(278, 68%, 11%, 0.6);
+}
+body .container .completed {
+  display: none;
+  text-align: center;
+  flex: 1;
+}
+body .container .completed h1 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+body .container .completed p {
+  color: hsl(279, 6%, 55%);
+}
+body .container .completed button {
+  margin: 10px 0;
+  width: 60%;
+  padding: 14px;
+  border: none;
+  outline: none;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .container .completed button:hover {
+  background-color: hsla(278, 68%, 11%, 0.6);
+}
+
+@media (max-width: 950px) {
+  body {
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 33.3333333333vh;
+  }
+  body .container {
+    width: 92% !important;
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 33.3333333333vh;
+  }
+  body .container {
+    width: 95% !important;
+    flex-direction: column;
+  }
+  body .container .cards {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  body .container .cards .front-card > img, body .container .cards .back-card > img {
+    width: 280px !important;
+    box-shadow: none !important;
+  }
+  body .container .cards .front-card {
+    z-index: 99;
+  }
+  body .container .cards .front-card > img {
+    margin-top: -73px;
+  }
+  body .container .cards .front-card .content {
+    position: absolute !important;
+    top: -55px !important;
+    left: 20px;
+  }
+  body .container .cards .front-card .content p {
+    margin: 13px 0 0 0 !important;
+    font-size: 19px !important;
+  }
+  body .container .cards .front-card .content .last {
+    margin-top: 0 !important;
+  }
+  body .container .cards .front-card .content .last p {
+    font-size: 12px !important;
+  }
+  body .container .cards .back-card {
+    position: relative !important;
+  }
+  body .container .cards .back-card .content .cvc {
+    position: absolute !important;
+    right: 25px;
+    top: -18px;
+  }
+  body .container .form form {
+    width: 95% !important;
+  }
+  body .container .completed button {
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=style.css.map */

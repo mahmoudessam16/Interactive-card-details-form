@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <section class="container">
+    <div class="cards">
+      <div class="front-card">
+        <img src="./images/bg-card-front.png" alt="front-card">
+        <div class="content">
+          <img src="./images/card-logo.svg" alt="logo">
+          <p class="number">0000 0000 0000 0000</p>
+          <div class="last">
+            <p class="name">Jane Applessed</p>
+            <p class="date"><span class="month">00</span>/<span class="year">00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="back-card">
+        <img src="./images/bg-card-back.png" alt="back-card">
+        <div class="content">
+          <p class="cvc">000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form">
+      <form action="">
+        <div class="holder-name">
+          <h3>Cardholder name</h3>
+          <input type="text" name="Cardholder-name" placeholder="e.g. Jane Applessed">
+          <p class="error">Please Provide a name</p>
+        </div>
+        <div class="card-number">
+          <h3>card number</h3>
+          <input type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+          <p class="error">Wrong format, numbers only</p>
+        </div>
+        <div class="date">
+          <div class="exp-date">
+            <h3>exp.date (mm/yy)</h3>
+            <div class="two">
+              <input type="text" placeholder="MM" id="mm">
+              <input type="text" placeholder="YY" id="yy">
+            </div>
+            <p class="error">Can't be blank</p>
+          </div>
+          <div class="cvc">
+            <h3>cvc</h3>
+            <input type="text" placeholder="e.g. 123">
+            <p class="error">Can't be blank</p>
+          </div>
+        </div>
+        <input type="submit" value="Confirm">
+      </form>
+    </div>
+
+    <div class="completed">
+      <img src="./images/icon-complete.svg" alt="complete">
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <button>Continue</button>
+    </div>
+  </section>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mahmoud Essam Mourad</a>.
+  </div> -->
+  <script src="main.js"></script>
+</body>
+</html>
